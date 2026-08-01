@@ -2,10 +2,10 @@
 
 * **Full Name:** Tarun
 * **Intern ID:** N/A
-* **Email Address:** [Insert Your Email Here]
+* **Email Address:** savanchoudhary6750.email@example.com
 * **GitHub Username:** savanchoudhary6750-creator
 * **Selected Website:** https://pavnaschoolaligarh.com/
-* **Live Demo Link:** [Pending Vercel Deployment]
+* **Live Demo Link:** https://dettroin-int-tarun-website.vercel.app/
 * **Technologies Used:** React.js, Node.js, Express.js, Tailwind CSS
 
 ### Key Improvements Made:
