@@ -5,7 +5,7 @@
 * **Email Address:** savanchoudhary6750.email@example.com
 * **GitHub Username:** savanchoudhary6750-creator
 * **Selected Website:** https://pavnaschoolaligarh.com/
-* **Live Demo Link:** https://your-actual-app-name.vercel.app/
+* **Live Demo Link:** Pending Vercel Deployment
 * **Technologies Used:** React.js, Node.js, Express.js, Tailwind CSS
 
 ### Key Improvements Made:
