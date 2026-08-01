@@ -17,74 +17,77 @@ export default function AboutSection() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-school-blue font-bold text-xs uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full">
+          <span className="text-school-blue font-extrabold text-xs uppercase tracking-widest bg-blue-50 px-3.5 py-1.5 rounded-full border border-blue-200">
             About Pavna School Aligarh
           </span>
-          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-school-navy mt-3 tracking-tight">
+          <h2 className="font-heading font-black text-3xl sm:text-4xl text-school-navy mt-3 tracking-tight">
             Transforming Purposeful Growth into Lifelong Greatness
           </h2>
-          <p className="text-slate-600 mt-4 text-base sm:text-lg">
+          <p className="text-slate-700 font-medium mt-4 text-base sm:text-lg leading-relaxed">
             At Pavna School Aligarh, education goes far beyond textbooks. We nurture every child's unique potential through modern pedagogy, global standards, and character-building values.
           </p>
         </div>
 
         {/* Tab Navigation for Vision, Mission & Values */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
           
           {/* Left Tab Buttons & Content */}
-          <div className="lg:col-span-7 space-y-6">
+          <div className="lg:col-span-7 flex flex-col justify-between space-y-6">
             
             {/* Tabs */}
-            <div className="flex p-1 bg-slate-100 rounded-xl max-w-md">
+            <div className="flex p-1.5 bg-slate-100 rounded-2xl max-w-md border border-slate-200">
               <button
                 onClick={() => setActiveTab('vision')}
-                className={`flex-1 py-2.5 px-4 rounded-lg text-sm font-bold transition-all ${
-                  activeTab === 'vision' ? 'bg-white text-school-navy shadow-sm' : 'text-slate-600 hover:text-school-navy'
+                className={`flex-1 py-2.5 px-4 rounded-xl text-sm font-extrabold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-school-blue ${
+                  activeTab === 'vision' ? 'bg-school-navy text-amber-400 shadow-md' : 'text-slate-700 hover:text-school-navy'
                 }`}
+                aria-label="View School Vision"
               >
                 <div className="flex items-center justify-center gap-2">
-                  <Eye className="w-4 h-4 text-school-gold" />
+                  <Eye className="w-4 h-4 text-amber-400" />
                   <span>Our Vision</span>
                 </div>
               </button>
 
               <button
                 onClick={() => setActiveTab('mission')}
-                className={`flex-1 py-2.5 px-4 rounded-lg text-sm font-bold transition-all ${
-                  activeTab === 'mission' ? 'bg-white text-school-navy shadow-sm' : 'text-slate-600 hover:text-school-navy'
+                className={`flex-1 py-2.5 px-4 rounded-xl text-sm font-extrabold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-school-blue ${
+                  activeTab === 'mission' ? 'bg-school-navy text-amber-400 shadow-md' : 'text-slate-700 hover:text-school-navy'
                 }`}
+                aria-label="View School Mission"
               >
                 <div className="flex items-center justify-center gap-2">
-                  <Target className="w-4 h-4 text-school-blue" />
+                  <Target className="w-4 h-4 text-amber-400" />
                   <span>Our Mission</span>
                 </div>
               </button>
 
               <button
                 onClick={() => setActiveTab('values')}
-                className={`flex-1 py-2.5 px-4 rounded-lg text-sm font-bold transition-all ${
-                  activeTab === 'values' ? 'bg-white text-school-navy shadow-sm' : 'text-slate-600 hover:text-school-navy'
+                className={`flex-1 py-2.5 px-4 rounded-xl text-sm font-extrabold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-school-blue ${
+                  activeTab === 'values' ? 'bg-school-navy text-amber-400 shadow-md' : 'text-slate-700 hover:text-school-navy'
                 }`}
+                aria-label="View Core Values"
               >
                 <div className="flex items-center justify-center gap-2">
-                  <Heart className="w-4 h-4 text-emerald-600" />
+                  <Heart className="w-4 h-4 text-amber-400" />
                   <span>Core Values</span>
                 </div>
               </button>
             </div>
 
             {/* Tab Body */}
-            <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200/80 shadow-subtle min-h-[300px] flex flex-col justify-center">
+            <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200/90 shadow-subtle min-h-[300px] flex-1 flex flex-col justify-center">
               {activeTab === 'vision' && (
                 <div className="space-y-4 animate-fade-in">
-                  <div className="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold">
-                    <Eye className="w-6 h-6" />
+                  <div className="w-12 h-12 rounded-2xl bg-amber-100 text-amber-800 flex items-center justify-center font-bold border border-amber-200">
+                    <Eye className="w-6 h-6 text-amber-700" />
                   </div>
-                  <h3 className="font-heading text-2xl font-bold text-school-navy">Empowering World-Ready Leaders</h3>
-                  <p className="text-slate-700 leading-relaxed">
+                  <h3 className="font-heading text-2xl font-black text-school-navy">Empowering World-Ready Leaders</h3>
+                  <p className="text-slate-800 font-medium text-base leading-relaxed">
                     "To create a premier learning environment that nurtures intellectual curiosity, emotional maturity, and global responsibility, transforming each child's innate potential into a legacy of lifelong achievements."
                   </p>
-                  <ul className="space-y-2 pt-2 text-sm text-slate-700">
+                  <ul className="space-y-2 pt-2 text-sm text-slate-800 font-bold">
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
                       <span>Integrating international academic standards with traditional Indian ethics.</span>
@@ -99,14 +102,14 @@ export default function AboutSection() {
 
               {activeTab === 'mission' && (
                 <div className="space-y-4 animate-fade-in">
-                  <div className="w-12 h-12 rounded-2xl bg-blue-100 text-blue-700 flex items-center justify-center font-bold">
-                    <Target className="w-6 h-6" />
+                  <div className="w-12 h-12 rounded-2xl bg-blue-100 text-blue-800 flex items-center justify-center font-bold border border-blue-200">
+                    <Target className="w-6 h-6 text-blue-700" />
                   </div>
-                  <h3 className="font-heading text-2xl font-bold text-school-navy">Holistic Development & SEEL Framework</h3>
-                  <p className="text-slate-700 leading-relaxed">
+                  <h3 className="font-heading text-2xl font-black text-school-navy">Holistic Development & SEEL Framework</h3>
+                  <p className="text-slate-800 font-medium text-base leading-relaxed">
                     "Our mission is to deliver student-centered education through our signature Social, Emotional, and Experiential Learning (SEEL) model, maintaining low student-teacher ratios (1:12) to ensure personalized academic and personal guidance."
                   </p>
-                  <ul className="space-y-2 pt-2 text-sm text-slate-700">
+                  <ul className="space-y-2 pt-2 text-sm text-slate-800 font-bold">
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="w-5 h-5 text-school-blue shrink-0 mt-0.5" />
                       <span>Providing hands-on lab experiments, robotics workshops, and field trips.</span>
@@ -121,15 +124,15 @@ export default function AboutSection() {
 
               {activeTab === 'values' && (
                 <div className="space-y-4 animate-fade-in">
-                  <div className="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold">
-                    <Compass className="w-6 h-6" />
+                  <div className="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold border border-emerald-200">
+                    <Compass className="w-6 h-6 text-emerald-700" />
                   </div>
-                  <h3 className="font-heading text-2xl font-bold text-school-navy">Pillars of Character & Culture</h3>
+                  <h3 className="font-heading text-2xl font-black text-school-navy">Pillars of Character & Culture</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                     {values.map((v, i) => (
-                      <div key={i} className="p-3 bg-white rounded-xl border border-slate-200">
-                        <h4 className="font-bold text-sm text-school-navy">{v.title}</h4>
-                        <p className="text-xs text-slate-600 mt-1">{v.desc}</p>
+                      <div key={i} className="p-4 bg-white rounded-2xl border border-slate-200 shadow-sm">
+                        <h4 className="font-black text-sm text-school-navy">{v.title}</h4>
+                        <p className="text-xs text-slate-700 font-medium mt-1">{v.desc}</p>
                       </div>
                     ))}
                   </div>
@@ -139,30 +142,34 @@ export default function AboutSection() {
 
           </div>
 
-          {/* Right Column: Leadership Quote Card */}
-          <div className="lg:col-span-5">
-            <div className="relative bg-gradient-to-br from-school-navy to-slate-900 text-white rounded-3xl p-8 shadow-2xl border border-slate-800">
+          {/* Right Column: Leadership Quote Card (Frosted Glass Dark Card with #E2E8F0 text) */}
+          <div className="lg:col-span-5 h-full flex flex-col">
+            <div className="relative glass-card rounded-3xl p-8 shadow-2xl border border-white/10 h-full flex flex-col justify-between" style={{ background: 'rgba(10, 25, 47, 0.95)' }}>
               
-              <Quote className="w-12 h-12 text-school-gold/40 mb-4" />
-              
-              <blockquote className="text-slate-200 text-base italic leading-relaxed mb-6 font-sans">
-                "Every child who enters Pavna School Aligarh is recognized as a unique individual with infinite possibilities. Our mandate is not merely to teach subjects, but to ignite curiosity, instill resilience, and shape empathetic human beings."
-              </blockquote>
-
-              <div className="pt-6 border-t border-white/10 flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-amber-500/20 text-school-gold flex items-center justify-center font-bold border border-school-gold/40">
-                  <UserCheck className="w-6 h-6" />
-                </div>
-                <div>
-                  <h4 className="font-heading font-bold text-lg text-white">Principal's Desk</h4>
-                  <p className="text-xs text-school-gold font-medium">Pavna School Aligarh Leadership</p>
-                </div>
+              <div>
+                <Quote className="w-12 h-12 text-amber-400/50 mb-4" />
+                
+                <blockquote className="text-[#E2E8F0] text-base sm:text-lg italic leading-relaxed mb-6 font-sans font-medium">
+                  "Every child who enters Pavna School Aligarh is recognized as a unique individual with infinite possibilities. Our mandate is not merely to teach subjects, but to ignite curiosity, instill resilience, and shape empathetic human beings."
+                </blockquote>
               </div>
 
-              {/* SEEL Badge Footer */}
-              <div className="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-slate-400">
-                <span>SEEL Certified Campus</span>
-                <span className="text-emerald-400 font-semibold">1:12 Mentorship Ratio</span>
+              <div>
+                <div className="pt-6 border-t border-white/10 flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-full bg-amber-400/20 text-amber-400 flex items-center justify-center font-bold border border-amber-400/40 shrink-0">
+                    <UserCheck className="w-6 h-6 text-amber-400" />
+                  </div>
+                  <div>
+                    <h4 className="font-heading font-black text-lg text-white">Principal's Desk</h4>
+                    <p className="text-xs text-amber-400 font-bold">Pavna School Aligarh Leadership</p>
+                  </div>
+                </div>
+
+                {/* SEEL Badge Footer */}
+                <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-[#E2E8F0] font-bold">
+                  <span>SEEL Certified Campus</span>
+                  <span className="text-emerald-400 font-extrabold">1:12 Mentorship Ratio</span>
+                </div>
               </div>
 
             </div>

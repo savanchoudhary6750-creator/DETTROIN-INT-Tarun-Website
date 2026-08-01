@@ -27,7 +27,12 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-slate-900 via-school-navy to-slate-900 text-white relative overflow-hidden">
+    <section 
+      className="py-20 text-white relative overflow-hidden"
+      style={{
+        background: 'linear-gradient(135deg, rgba(11, 19, 43, 0.98) 0%, rgba(15, 23, 42, 0.95) 100%)'
+      }}
+    >
       
       {/* Ambient background lighting */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-[160px] pointer-events-none" />
@@ -36,26 +41,26 @@ export default function Testimonials() {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-school-gold font-bold text-xs uppercase tracking-widest bg-white/10 backdrop-blur-md border border-white/15 px-3.5 py-1.5 rounded-full">
+          <span className="text-amber-400 font-extrabold text-xs uppercase tracking-widest bg-white/10 backdrop-blur-md border border-white/15 px-4 py-1.5 rounded-full shadow-sm">
             Parent & Student Voices
           </span>
-          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-white mt-4 tracking-tight">
+          <h2 className="font-heading font-black text-3xl sm:text-4xl text-white mt-4 tracking-tight">
             Trusted by Hundreds of Families Across Aligarh
           </h2>
-          <p className="text-slate-300 mt-4 text-base sm:text-lg">
+          <p className="text-[#E2E8F0] font-medium mt-4 text-base sm:text-lg leading-relaxed">
             Read how our holistic approach to education is shaping bright futures and happy learners.
           </p>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Testimonials Grid (Frosted Glass Cards) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
           {reviews.map((rev, idx) => (
             <div
               key={idx}
-              className="bg-slate-900/60 border border-slate-800/80 rounded-3xl p-8 backdrop-blur-md shadow-xl hover:shadow-2xl hover:border-amber-500/40 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between relative overflow-hidden group"
+              className="glass-card rounded-3xl p-8 h-full flex flex-col justify-between relative overflow-hidden group border border-white/10"
             >
               {/* Amber Quote Icon Backdrop */}
-              <Quote className="w-14 h-14 text-amber-500/15 absolute top-4 right-4 pointer-events-none group-hover:text-amber-500/25 transition-colors" />
+              <Quote className="w-14 h-14 text-amber-400/15 absolute top-4 right-4 pointer-events-none group-hover:text-amber-400/30 transition-colors" />
 
               <div className="relative z-10">
                 {/* Rating stars */}
@@ -65,21 +70,25 @@ export default function Testimonials() {
                   ))}
                 </div>
 
-                <p className="text-slate-200 text-sm leading-relaxed italic mb-6">
+                <p className="text-[#E2E8F0] text-sm sm:text-base leading-relaxed italic mb-6 font-medium">
                   "{rev.comment}"
                 </p>
               </div>
 
               {/* Author */}
-              <div className="pt-5 border-t border-slate-800/80 flex items-center gap-3 relative z-10">
+              <div className="pt-5 border-t border-white/10 flex items-center gap-3 relative z-10">
                 <img
                   src={rev.avatar}
                   alt={rev.name}
-                  className="w-11 h-11 rounded-full object-cover border-2 border-school-gold shadow-md"
+                  loading="lazy"
+                  decoding="async"
+                  width="150"
+                  height="150"
+                  className="w-11 h-11 rounded-full object-cover border-2 border-amber-400 shadow-md"
                 />
                 <div>
-                  <h4 className="font-heading font-bold text-sm text-white group-hover:text-school-gold transition-colors">{rev.name}</h4>
-                  <p className="text-xs text-slate-400 font-medium">{rev.role}</p>
+                  <h4 className="font-heading font-black text-sm text-white group-hover:text-amber-300 transition-colors">{rev.name}</h4>
+                  <p className="text-xs text-[#E2E8F0] font-medium">{rev.role}</p>
                 </div>
               </div>
             </div>
@@ -88,8 +97,8 @@ export default function Testimonials() {
 
         {/* Community Trust Badge with Radial Glow */}
         <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-gradient-to-r from-amber-500/10 via-orange-500/10 to-amber-500/10 border border-amber-500/30 text-amber-300 text-xs sm:text-sm font-semibold shadow-glow hover:-translate-y-1 transition-all duration-300 cursor-pointer">
-            <HeartHandshake className="w-5 h-5 text-school-gold shrink-0 animate-pulse" />
+          <div className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs sm:text-sm font-extrabold shadow-glow hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <HeartHandshake className="w-5 h-5 text-amber-400 shrink-0 animate-pulse" />
             <span>98.4% Parent Retention & Satisfaction Rate • Session 2024-25</span>
           </div>
         </div>
